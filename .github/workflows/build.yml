@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - name: Fetch BtbN/FFmpeg-Builds
       run: |
@@ -20,6 +20,6 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          ffmpeg-master-latest-win64-gpl/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe
+          ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe
         tag_name: nightly
         make_latest: true
